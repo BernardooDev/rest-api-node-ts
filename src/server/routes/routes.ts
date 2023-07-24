@@ -1,5 +1,7 @@
 import { Router } from "express";
-import { StatusCodes } from "http-status-codes"
+// import { StatusCodes } from "http-status-codes"
+
+import { CitiesController } from "../controllers/cities"
 
 const router = Router()
 
@@ -7,10 +9,7 @@ router.get("/", (req, res) => {
     res.send("teste")
 })
 
-router.post("/", (req, res) => {
-    console.log(req.query)
-    res.status(StatusCodes.CREATED).send("ok")
-})
+router.post("/", CitiesController.create)
 
 router.put("/", (req, res) => {
 

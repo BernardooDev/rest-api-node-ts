@@ -6,7 +6,7 @@ const server = express()
 
 server.use(express.json())
 
-server.use("/user", router)
+server.use("/cities", router)
 
 export { server };
 
